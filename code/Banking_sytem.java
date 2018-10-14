@@ -37,10 +37,11 @@ class Bank
 	//method to withdraw money
 	void withdrawal()
 	{
-		long amt;
+		long amt; long minbalance;
+		minbalance=1000;
 		System.out.println("Enter Amount U Want to withdraw : ");
 		amt=KB.nextLong();
-		if(balance>=amt)
+		if(balance-amt>=minbalance)
 		{ 
 			balance=balance-amt;
 		}
